@@ -1,0 +1,14 @@
+services:
+  trovit.temporary_filesystem.file_handler:
+    class: Trovit\TemporaryFilesystem\FileHandler
+    arguments:
+      - '%trovit_php_code_formatter.temporary_path%'
+
+  trovit.php_code_formatter.formatters.php_cs_formatter:
+    class: Trovit\PhpCodeFormatter\Formatters\PhpCsFormatter
+    arguments:
+      - '@trovit.temporary_filesystem.file_handler'
+
+  trovit.php_code_formatter.managers.formatter_manager:
+    class: Trovit\PhpCodeFormatter\Managers\FormatterManager
+

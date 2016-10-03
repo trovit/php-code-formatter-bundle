@@ -1,0 +1,27 @@
+{
+    "name": "trovit/php-code-formatter-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trovit",
+            "email": "github@trovit.com"
+        }
+    ],
+    "description": "Provides a basic system to organize and execute php code formatters",
+    "type": "symfony-bundle",
+    "require": {
+        "symfony/framework-bundle": "^3.1",
+        "symfony/console": "^3.1",
+        "symfony/yaml": "^3.1",
+        "symfony/process": "^3.1",
+        "trovit/php-code-formatter": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trovit\\PhpCodeFormatterBundle\\": ""
+        }
+    }
+
+
+
+}
