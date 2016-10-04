@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Trovit\PhpCodeFormatterBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
