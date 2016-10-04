@@ -3,7 +3,6 @@
 
 namespace Trovit\PhpCodeFormatterBundle\DependencyInjection;
 
-
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
@@ -22,8 +21,8 @@ class DynamicFormattersCompilerPass implements CompilerPassInterface
         $formatters = $container->getParameter('trovit_php_code_formatter.formatter_services');
         $formatterReferences = [];
 
-        foreach ($formatters as $formatter){
-            if(!$container->hasDefinition($formatter)){
+        foreach ($formatters as $formatter) {
+            if (!$container->hasDefinition($formatter)) {
                 throw new ServiceNotFoundException($formatter);
             }
             $formatterReferences[] = new Reference($formatter);

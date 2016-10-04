@@ -5,13 +5,10 @@ namespace Trovit\PhpCodeFormatterBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidTypeException;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Reference;
 
 /**
  * This is the class that validates and merges configuration from your app/config files
  *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class}
  */
 class Configuration implements ConfigurationInterface
 {
@@ -31,7 +28,7 @@ class Configuration implements ConfigurationInterface
                     ->isRequired()
                     ->validate()
                     ->always(function ($v) {
-                        if(is_dir($v)){
+                        if (is_dir($v)) {
                             return $v;
                         }
                         throw new InvalidTypeException('Temporary path is not a valid directory.'

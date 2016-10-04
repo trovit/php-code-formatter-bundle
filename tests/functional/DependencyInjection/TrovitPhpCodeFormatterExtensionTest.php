@@ -19,7 +19,8 @@ class TrovitPhpCodeFormatterExtensionTest extends \PHPUnit_Framework_TestCase
     public function testLoadWithoutConfig()
     {
         $this->expectException(InvalidConfigurationException::class);
-        $this->expectExceptionMessage('The child node "temporary_path" at path "trovit_php_code_formatter" must be configured.');
+        $this->expectExceptionMessage('The child node "temporary_path" at path '
+            .'"trovit_php_code_formatter" must be configured.');
         $this->getContainerForConfig([[]]);
 
     }
