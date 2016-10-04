@@ -34,27 +34,27 @@ There are only 2 parameters available at the moment:
 
 - *temporary_path* _(string)_: temporary path where the temporary files should be created. This is necessary for those formatter libraries that only works with filesystem.
 
-- *formatter_services* _(string[])_: each string represents de reference name of a formatter service
+- *formatter_services* _(string[])_: each string represents the reference name of a formatter service
 
 Example:
 ```yaml
 # app/config.yml
 
 trovit_php_code_formatter:
-    temporary_path: "%kernel.root_dir%/../test/resources/"
+    temporary_path: "%kernel.cache_dir%/tmp/"
     formatter_services:
       - 'trovit.php_code_formatter.formatters.php_cs_formatter'
 ```
-### Step 3 (optional): Create your own Formatter
+### Step 4 (optional): Create your own Formatter
 
-When you need to format your code and the formatters in the bundle don't satisfy your needs (different code language, formats, etc...) there is the possibility to create a new Formatter class by implementing the Formatter interface (_Trovit\PhpCodeFormatter\Formatters\Formatter_) and implement its method *formatCode*
+When you need to format your code and the formatters provided by this bundle doesn't satisfy your needs (different code language, formats, etc...) there is the possibility to create a new Formatter class by implementing the Formatter interface (_Trovit\PhpCodeFormatter\Formatters\Formatter_) and implement its method *formatCode*
 
 After that, you have to register the formatter as a service and add the service reference name in the config (_check step 3_).
 
 
 ## Usage
 
-Get the manager service wherever you want to call the method *execute* with the bad format code as a parameter. It will return the formatted code.
+Get the manager service wherever you want to call the method *execute* with the bad formatted code as a parameter. It will return the formatted code.
 
 Example with the PhpCsFormatter:
 ```php
