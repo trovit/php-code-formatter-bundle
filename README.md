@@ -38,7 +38,7 @@ There are only 2 parameters available at the moment:
 
 Example:
 ```yaml
-// app/config.yml
+# app/config.yml
 
 trovit_php_code_formatter:
     temporary_path: "%kernel.root_dir%/../test/resources/"
