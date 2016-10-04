@@ -60,8 +60,8 @@ Example with the PhpCsFormatter:
 ```php
 // src/AppBundle/Controller/DefaultController.php
 
-$code = '$code = \'<?php                    
-                 echo "hola"; ?>\';';
+$code = '<?php                    
+                 echo "hola"; ?>';
 $this->get('trovit.php_code_formatter.managers.formatter_manager')->execute($code);
 
 // This will return
