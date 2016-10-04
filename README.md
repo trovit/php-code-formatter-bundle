@@ -32,7 +32,7 @@ public function registerBundles()
 
 There are only 2 parameters available at the moment:
 
-- *temporary_path* _(string)_: temporary path where the temporary files should be created. This is necessary for those formatter libraries that
+- *temporary_path* _(string)_: temporary path where the temporary files should be created. This is necessary for those formatter libraries that only works with filesystem.
 
 - *formatter_services* _(string[])_: each string represents de reference name of a formatter service
 
@@ -76,4 +76,4 @@ $this->get('trovit.php_code_formatter.managers.formatter_manager')->execute($cod
 - *PhpCsFormatter*: Wrapper of PHP CS Fixer by Fabien Potencier & Dariusz Rumiński
 
 
-Feel free to add as much as you want and contribute by PR!
+Feel free to add more formatters and contribute by PR!
