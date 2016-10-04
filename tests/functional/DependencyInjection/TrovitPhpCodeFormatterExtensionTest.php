@@ -10,7 +10,7 @@ class TrovitPhpCodeFormatterExtensionTest extends \PHPUnit_Framework_TestCase
 {
     public function testLoadWithTemporaryFile()
     {
-        $config['temporary_path'] = sys_get_temp_dir();
+        $config['temporary_path'] = __DIR__;
         $container = $this->getContainerForConfig([$config]);
         $formatterManager = $container->get('trovit.php_code_formatter.managers.formatter_manager');
         $this->assertEquals("<?php echo 'hola';\n", $formatterManager->execute('<?php echo "hola"; ?>'));
@@ -26,7 +26,7 @@ class TrovitPhpCodeFormatterExtensionTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadWithGoodServiceFormatter()
     {
-        $config['temporary_path'] = sys_get_temp_dir();
+        $config['temporary_path'] = __DIR__;
         $config['formatter_services'] = ['trovit.php_code_formatter.formatters.php_cs_formatter'];
         $container = $this->getContainerForConfig([$config]);
         $formatterManager = $container->get('trovit.php_code_formatter.managers.formatter_manager');
@@ -35,7 +35,7 @@ class TrovitPhpCodeFormatterExtensionTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadWithBadServiceFormatter()
     {
-        $config['temporary_path'] = sys_get_temp_dir();
+        $config['temporary_path'] = __DIR__;
         $config['formatter_services'] = ['bad_fake_service'];
         $this->expectException(ServiceNotFoundException::class);
         $this->expectExceptionMessage('You have requested a non-existent service "bad_fake_service".');
