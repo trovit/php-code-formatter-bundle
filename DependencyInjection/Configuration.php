@@ -5,6 +5,8 @@ namespace Trovit\PhpCodeFormatterBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Exception\InvalidTypeException;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Reference;
 
 /**
  * This is the class that validates and merges configuration from your app/config files
@@ -43,10 +45,15 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->variableNode('formatter_services')
                     ->info("Array of strings where each string is the service reference name of a formatter")
-                    ->cannotBeEmpty()
                     ->defaultValue(array(
                         'trovit.php_code_formatter.formatters.php_cs_formatter',
                     ))
+                    ->validate()
+                    ->ifString()
+                        ->then(function($formatter) {
+                            return array($formatter);
+                        })
+                    ->end()
                 ->end()
             ->end();
 

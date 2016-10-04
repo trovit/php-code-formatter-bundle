@@ -20,8 +20,14 @@
         "psr-4": {
             "Trovit\\PhpCodeFormatterBundle\\": ""
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trovit\\PhpCodeFormatterBundle\\Tests\\Functional\\": "tests/functional",
+            "Trovit\\PhpCodeFormatterBundle\\Tests\\Unit\\": "tests/unit"
+        }
+    },
+    "require-dev": {
+        "matthiasnoback/symfony-config-test": "^2.0"
     }
-
-
-
 }

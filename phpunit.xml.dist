@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="./Tests/bootstrap.php" colors="true">
-
+<phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="PhpCodeFormatterBundle test suite">
-            <directory suffix="Test.php">./Tests</directory>
+        <testsuite name="PhpCodeFormatterBundle">
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
-
     <filter>
         <whitelist>
-            <directory>./</directory>
+            <directory>.</directory>
             <exclude>
-                <directory>./Resources</directory>
-                <directory>./Tests</directory>
+                <directory>./tests</directory>
                 <directory>./vendor</directory>
             </exclude>
         </whitelist>
