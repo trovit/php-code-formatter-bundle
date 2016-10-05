@@ -11,10 +11,11 @@
     "type": "symfony-bundle",
     "require": {
         "symfony/framework-bundle": "^2.3|^3.1",
-        "symfony/console": "^2.3|^3.1",
-        "symfony/yaml": "^2.3|^3.1",
-        "symfony/process": "^2.3|^3.1",
         "trovit/php-code-formatter": "^1.0"
+    },
+    "require-dev": {
+        "matthiasnoback/symfony-config-test": "^2.0",
+        "mikey179/vfsStream": "^1.6"
     },
     "autoload": {
         "psr-4": {
@@ -26,8 +27,5 @@
             "Trovit\\PhpCodeFormatterBundle\\Tests\\Functional\\": "tests/functional",
             "Trovit\\PhpCodeFormatterBundle\\Tests\\Unit\\": "tests/unit"
         }
-    },
-    "require-dev": {
-        "matthiasnoback/symfony-config-test": "^2.0"
     }
 }
