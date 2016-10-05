@@ -10,4 +10,5 @@ env:
 
 install:
     - composer require symfony/framework-bundle:${SYMFONY_VERSION}
+    - composer require symfony/filesystem:${SYMFONY_VERSION}
     - composer update $COMPOSER_FLAGS
