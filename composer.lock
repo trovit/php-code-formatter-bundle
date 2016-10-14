@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "13ff08026faf19c33e98dc8494937e7e",
-    "content-hash": "b28237e69a2c0c0f08985976dedf70eb",
+    "hash": "b44bf8703023341a9d32804d3285db44",
+    "content-hash": "916c05fb7b65a529fbcd34fb5358ef7d",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1894,16 +1894,16 @@
         },
         {
             "name": "trovit/php-code-formatter",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/trovit/php-code-formatter.git",
-                "reference": "832cd9d5a9437d236ca63da54f219c36bc478740"
+                "reference": "05b0fc63f27aece02a217991f0bdcbb86faec494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trovit/php-code-formatter/zipball/832cd9d5a9437d236ca63da54f219c36bc478740",
-                "reference": "832cd9d5a9437d236ca63da54f219c36bc478740",
+                "url": "https://api.github.com/repos/trovit/php-code-formatter/zipball/05b0fc63f27aece02a217991f0bdcbb86faec494",
+                "reference": "05b0fc63f27aece02a217991f0bdcbb86faec494",
                 "shasum": ""
             },
             "require": {
@@ -1930,20 +1930,20 @@
                 }
             ],
             "description": "Provides a basic system to organize and execute php code formatters",
-            "time": "2016-10-05 15:59:40"
+            "time": "2016-10-14 13:54:58"
         },
         {
             "name": "trovit/temporary-filesystem",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/trovit/temporary-filesystem.git",
-                "reference": "cbd09b710cb9d6b663e2e4694a75ee59302274ff"
+                "reference": "0cd0cd5fa5a93a6cca573c4aee1308475218e3ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trovit/temporary-filesystem/zipball/cbd09b710cb9d6b663e2e4694a75ee59302274ff",
-                "reference": "cbd09b710cb9d6b663e2e4694a75ee59302274ff",
+                "url": "https://api.github.com/repos/trovit/temporary-filesystem/zipball/0cd0cd5fa5a93a6cca573c4aee1308475218e3ab",
+                "reference": "0cd0cd5fa5a93a6cca573c4aee1308475218e3ab",
                 "shasum": ""
             },
             "require": {
@@ -1970,7 +1970,7 @@
                 }
             ],
             "description": "Provides a basic utilities for temporary persisted files",
-            "time": "2016-10-05 13:15:16"
+            "time": "2016-10-14 13:44:45"
         }
     ],
     "packages-dev": [

@@ -9,5 +9,5 @@ env:
     - SYMFONY_VERSION="^3.1"
 
 install:
-    - composer require symfony/framework-bundle:${SYMFONY_VERSION}
-    - composer update $COMPOSER_FLAGS
+    - if [ "$SYMFONY_VERSION" != "" ]; then composer require "symfony/framework-bundle:${SYMFONY_VERSION}" --no-update; fi;
+    - composer update
