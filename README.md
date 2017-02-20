@@ -73,7 +73,7 @@ $this->get('trovit.php_code_formatter.managers.formatter_manager')->execute($cod
 
 ## List of available formatters
 
-- *PhpCsFormatter*: Wrapper of PHP CS Fixer by Fabien Potencier & Dariusz Rumiński
+- *PhpCsFormatter* (with default configuration): Wrapper of PHP CS Fixer by Fabien Potencier & Dariusz Rumiński
 
 
 Feel free to add more formatters and contribute by PR!
